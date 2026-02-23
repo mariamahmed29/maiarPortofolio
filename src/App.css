@@ -1,0 +1,286 @@
+:root {
+    --Dark-Navy-Blue: #112250;
+    --Steel-Blu: #3C5070;
+    --Light-Gold: #E0C58F;
+    --Light-Beige: #D9CBC2;
+    --Soft-Cream: #F5F0E9; 
+}
+
+*, ::after, ::before{
+    box-sizing:border-box;
+    padding: 0; margin: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    text-transform: capitalize;
+}
+
+body {
+    background: var(--Soft-Cream);
+    color: var(--Dark-Navy-Blue);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+}
+.dark {
+    background-image: url("../public/images/photos/stars1.webp");
+    background-size: cover;     
+    background-repeat: no-repeat; 
+    background-position: center;  
+}
+
+/* ==========================
+    HERO SECTION
+========================== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--Dark-Navy-Blue);
+    color: var(--Soft-Cream);
+    border-bottom: 3px solid var(--Light-Gold);
+    padding: 90px 0;
+    background-image: url("../public/images/photos/stars1.webp");
+    background-size: cover;     
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+/* ==========================
+    services SECTION
+========================== */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid var(--Light-Beige);
+    background-color: var(--Dark-Navy-Blue);
+    text-align: center;
+    width: 100%;
+}
+.service-item {
+    text-decoration: none;
+    padding: 20px;
+    color: var(--Light-Beige);
+    font-family: "Dancing Script", cursive;
+    font-size: 1rem;
+    border-right: 1px solid var(--Light-Beige);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.service-item:last-child {
+    border-right: none;
+}
+.service-item:hover {
+    background-color: var(--Light-Beige);
+    color: var(--Dark-Navy-Blue);
+}
+
+/* ==========================
+    skillS SECTION
+========================== */
+.skills {
+    text-align: center;
+    padding: 60px 20px;
+    margin-top: 30px;
+    background: var(--Light-Gold);
+    border-bottom: 3px solid var(--Dark-Navy-Blue);
+    border-top: 3px solid var(--Dark-Navy-Blue);
+}
+.skills-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Dark-Navy-Blue);
+}
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.icon-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--Dark-Navy-Blue);
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.icon-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--Dark-Navy-Blue);
+}
+.icon-item img {
+    width: 50px;
+    height: 50px;
+}
+.icon-item span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--Light-Gold);
+    font-family: "Dancing Script", cursive;
+}
+/* ========================
+    PROJECTS FILTER
+======================== */
+.projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--Dark-Navy-Blue);
+    border-top: 3px solid var(--Light-Gold);
+    border-bottom: 3px solid var(--Light-Gold);
+    margin: 30px 0;
+    background-image: url("../public/images/photos/stars1.webp");
+    background-size: cover;     
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+.projects-main-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--Light-Gold);
+    font-family: 'Montserrat', sans-serif;
+}
+.projects-container .project-img {
+    width: 100%; 
+    max-width: 500px; 
+    height: 500px; 
+    border-radius: 
+    10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: opacity 0.3s ease; 
+    cursor: pointer;
+}
+.projects-container.branding .project-img, .projects-container.prints .project-img {
+    width: 100%;
+    max-width: 800px;
+}
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.projects-filter button {
+    padding: 10px 25px;
+    background: transparent;
+    border: 2px solid var(--Light-Gold);
+    color: var(--Light-Gold);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 25px;
+    font-weight: 600;
+}
+.projects-filter button:hover {
+    background: var(--Light-Gold);
+    color: var(--Dark-Navy-Blue);
+}
+.active-filter {
+    background: var(--Light-Gold) !important;
+    color: var(--Dark-Navy-Blue) !important;
+}
+
+
+/* ==========================
+    FOOTER SECTION
+========================== */
+.footer {
+    background: var(--Light-Gold);
+    border-top: 3px solid var(--Dark-Navy-Blue);
+    color: var(--Dark-Navy-Blue);
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    padding: 20px;
+}
+.social-links a {
+    color: var(--Dark-Navy-Blue);
+    margin: 0 3px;
+}
+.social-links a i {
+    font-size: 1.3rem;
+}
+
+/* ====================================================
+    Screens less than 480px, Tablet & Desktop View
+======================================================= */
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 15px;
+        height: auto;
+    }
+    .hero .hero-content h5 {
+        font-size: 0.9rem;
+    }
+
+    .hero .hero-content .title {
+        font-size: 1.7rem;
+    }
+    .icon-item span {
+        font-size: 1rem;
+    }
+    .icon-item img {
+        width: 40px;
+        height: 40px;
+    }
+    .projects-container.media .project-img {     
+        height: auto;    
+    }
+    .projects-container.branding .project-img, .projects-container.prints .project-img {
+        height: 250px; 
+        max-width: 500px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero .hero-content h5 {
+        font-size: 1.3rem;
+    }
+
+    .hero .hero-content .title {
+        font-size: 3.5rem;
+    }
+    .icons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    .projects-container.branding .project-img, .projects-container.prints .project-img {
+        height: 290px; 
+        max-width: 500px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        height: 80vh;
+        padding: 80px 60px;
+    }
+
+    .hero .hero-content h5 {
+        font-size: 2rem;
+    }
+
+    .hero .hero-content .title {
+        font-size: 5rem;
+    }
+    .icons {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

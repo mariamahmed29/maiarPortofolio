@@ -7,7 +7,7 @@
 }
 
 *, ::after, ::before{
-    box-sizing:border-box;
+    box-sizing: border-box;
     padding: 0; margin: 0;
     list-style: none;
     border: none;
@@ -23,12 +23,6 @@ body {
     font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 
 }
-.dark {
-    background-image: url("../public/images/photos/stars1.webp");
-    background-size: cover;     
-    background-repeat: no-repeat; 
-    background-position: center;  
-}
 
 /* ==========================
     HERO SECTION
@@ -38,14 +32,14 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: var(--Dark-Navy-Blue);
-    color: var(--Soft-Cream);
-    border-bottom: 3px solid var(--Light-Gold);
+    width: 100%;
+    min-height: 100vh;
+    color: var(--Dark-Navy-Blue);
+    border-bottom: 3px solid var(--Dark-Navy-Blue);
     padding: 90px 0;
-    background-image: url("../public/images/photos/stars1.webp");
-    background-size: cover;     
-    background-repeat: no-repeat; 
-    background-position: center; 
+    background-image: 
+        radial-gradient(at top left, var(--Light-Gold), transparent 50%),
+        radial-gradient(at bottom right, var(--Dark-Navy-Blue), transparent 50%);
 }
 /* ==========================
     services SECTION
@@ -53,7 +47,7 @@ body {
 .services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    border-bottom: 1px solid var(--Light-Beige);
+    border-bottom: 1px solid var(--Dark-Navy-Blue);
     background-color: var(--Dark-Navy-Blue);
     text-align: center;
     width: 100%;
@@ -83,7 +77,7 @@ body {
     text-align: center;
     padding: 60px 20px;
     margin-top: 30px;
-    background: var(--Light-Gold);
+    background: var(--Soft-Cream);
     border-bottom: 3px solid var(--Dark-Navy-Blue);
     border-top: 3px solid var(--Dark-Navy-Blue);
 }
@@ -133,19 +127,15 @@ body {
     align-items: center;
     padding: 60px 20px;
     text-align: center;
-    background: var(--Dark-Navy-Blue);
+    background: linear-gradient(to bottom, var(--Dark-Navy-Blue), var(--Soft-Cream));
     border-top: 3px solid var(--Light-Gold);
-    border-bottom: 3px solid var(--Light-Gold);
-    margin: 30px 0;
-    background-image: url("../public/images/photos/stars1.webp");
-    background-size: cover;     
-    background-repeat: no-repeat; 
-    background-position: center; 
+    border-bottom: 3px solid var(--Dark-Navy-Blue);
+    margin: 30px 0;; 
 }
 .projects-main-title {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: var(--Light-Gold);
+    color: var(--Dark-Navy-Blue);
     font-family: 'Montserrat', sans-serif;
 }
 .projects-container .project-img {
@@ -171,20 +161,20 @@ body {
 .projects-filter button {
     padding: 10px 25px;
     background: transparent;
-    border: 2px solid var(--Light-Gold);
-    color: var(--Light-Gold);
+    border: 2px solid var(--Dark-Navy-Blue);
+    color: var(--Dark-Navy-Blue);
     cursor: pointer;
     transition: 0.3s;
     border-radius: 25px;
     font-weight: 600;
 }
 .projects-filter button:hover {
-    background: var(--Light-Gold);
-    color: var(--Dark-Navy-Blue);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 .active-filter {
-    background: var(--Light-Gold) !important;
-    color: var(--Dark-Navy-Blue) !important;
+    background: var(--Dark-Navy-Blue) !important;
+    color: var(--Light-Gold) !important;
 }
 
 
@@ -192,15 +182,15 @@ body {
     FOOTER SECTION
 ========================== */
 .footer {
-    background: var(--Light-Gold);
-    border-top: 3px solid var(--Dark-Navy-Blue);
-    color: var(--Dark-Navy-Blue);
+    background: var(--Dark-Navy-Blue);
+    border-top: 3px solid var(--Light-Gold);
+    color: var(--Light-Gold);
     font-family: "Dancing Script", cursive;
     text-align: center;
     padding: 20px;
 }
 .social-links a {
-    color: var(--Dark-Navy-Blue);
+    color: var(--Light-Gold);
     margin: 0 3px;
 }
 .social-links a i {
@@ -270,13 +260,14 @@ body {
         height: 80vh;
         padding: 80px 60px;
     }
-
-    .hero .hero-content h5 {
+    .hero h5 {
         font-size: 2rem;
     }
-
-    .hero .hero-content .title {
-        font-size: 5rem;
+    .hero .title {
+        font-size: 5em;
+    }
+    .hero p {
+        font-size: 2.5em;
     }
     .icons {
         flex-direction: row;

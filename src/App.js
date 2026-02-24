@@ -1,9 +1,19 @@
 import { useState } from "react";
-
 import './App.css';
 import ImageProjects from './components/projects';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function App() {
+  // AOS ANIMATION
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, 
+        once: true,    
+      });
+    }, []);
+
     const [activeCategory, setActiveCategory] = useState("media");
     console.log(activeCategory);
     const mediaImages = [
@@ -39,19 +49,18 @@ function App() {
     if (activeCategory === "prints") return printsImages;
   };
 
-
   return (
     <div>
       {/* SERVICES */}
-    <div className="services dark" id="services" >
+    <div className="services" id="services">
         <a href="#project" className="service-item">social media</a>
         <a href="#project" className="service-item">Branding</a>
         <a href="#project" className="service-item">prints</a>
     </div>
 
       {/* HERO */}
-      <section className="hero text-center dark">
-        <div className="container">
+      <section className="hero text-center" >
+        <div className="container" data-aos="fade-up">
           <h5>hello, i'm </h5>
           <h1 className="fw-bold title">Maiar Elgizawy</h1>
           <p className="lead mt-3"><span className='btn-custom'>• Graphic Designer</span></p>
@@ -60,7 +69,7 @@ function App() {
       
 
       {/* SKILLS */}
-    <section className="skills" id="skills">
+    <section className="skills" id="skills" data-aos="fade-up">
       <h2 className="skills-title">Skills</h2>
       <div className="icons">
           <div className="icon-item">
@@ -76,7 +85,7 @@ function App() {
     </section>
 
       {/* PROJECTS */}
-      <section className="projects-wrapper dark" id="project">
+      <section className="projects-wrapper dark" id="project" data-aos="fade-up">
 
         <h2 className="projects-main-title">My Projects</h2>
 
